@@ -211,6 +211,244 @@
 
 <!-- 
 <!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Client site exam! Lets do the best</title>
+
+    <style>
+       
+
+        #prg{
+            width: 50%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h4{
+            font-weight: bold;
+        }
+        .sidenav .content,
+        .sidenews .content {
+            padding: 10px;
+            border: 2px solid black;
+        }
+        
+        .sidenav,
+        .sidenews {
+            height: auto;
+            width: 0;
+            position: absolute;
+            overflow-x: hidden;
+            transition: 0.5s;
+            background: rgb(67, 157, 209);
+        }
+
+        .sidenav {
+            left: 30px;
+        }
+
+        .sidenews {
+            right: 30px;
+        }
+
+        .sidenews {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .sidenav a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #0e0f0f;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: rgb(231, 10, 10);
+        }
+
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border: 2px solid #000;
+            background-color: rgb(95, 125, 153);
+            font-weight: bold;
+        }
+
+        .top-header img {
+            width: 100px;
+        }
+
+        .new-item-left,
+        .new-item-right {
+            display: flex;
+        }
+
+        footer {
+            background-color: rgb(81, 159, 211);
+            bottom: 0;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        .fixed-items {
+            width: 100%;
+            position: absolute;
+            top: 200px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .fixed-items .menu-open,
+        .fixed-items .news-open {
+            position: relative;
+        }
+
+        .fixed-items .menu-open {
+            transform: rotate(90deg);
+        }
+
+        .fixed-items .news-open {
+            transform: rotate(-90deg);
+        }
+
+    
+
+        @media only screen and (max-width: 1023px) {
+
+            .header-menu,
+            .header-logo,
+            .menu-open,
+            .news-open {
+                display: none;
+            }
+
+            .toggle {
+                display: block;
+            }
+
+            .fixed-items {
+                top: 70px;
+            }
+
+            .sidenav {
+                left: 5px;
+            }
+
+            .sidenews {
+                right: 5px;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            .toggle {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-header">
+            <div class="header-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Prague_charles_bridge_morning.jpg" alt="">
+            </div>
+            <div class="header-news">Header news</div>
+            <span class="toggle" onclick="openSideMenu()">Menu</span>
+            <span class="toggle" onclick="openSideNewInfo()">Info</span>
+        </div><br><br>
+    </header>
+<main>
+    <div class="container">
+        <div class="headline-news">
+            <div class="new-image-container">
+                <h2 id="prg">This is for Client-Side exam!!</h2><br><br>
+                <img id="prg" src="https://www.praguemorning.cz/wp-content/uploads/2021/11/Untitled-design-1.png" alt=""><br><br>
+            </div>
+            <div>
+                <h3>Headline (header)</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque quis, cupiditate quos facilis
+                    doloremque eaque alias earum aspernatur incidunt accusantium commodi quam corrupti consectetur
+                    ratione, eius natus distinctio vitae voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Quasi porro, delectus alias ea esse necessitatibus reiciendis exercitationem repudiandae
+                    numquam, modi rem est dicta similique hic ipsam provident odit, dignissimos commodi.
+                <br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore autem beatae eligendi ex ullam pariatur! Quo nobis recusandae veniam quidem fuga maiores. Praesentium repellendus alias commodi accusamus recusandae, iure error.</p>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-items">
+        <div id="menuSideBar" class="sidenav">
+            <div class="content">
+                <a href="#">Menu-1</a>
+                <a href="#">Menu-2</a>
+                <a href="#">Menu-3</a>
+                <a href="#">Menu-4</a>
+                <a href="#">Menu-5</a>
+            </div>
+        </div>
+        <div id="newsSideBar" class="sidenews">
+            <div class="content">
+                <h4>News</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, assumenda saepe eos, in nostrum
+                    consequuntur qui eaque id pariatur. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, dolorum. Ipsam perspiciatis fuga sit officiis natus ducimus nulla nam et facere, hic maiores ea qui commodi culpa reprehenderit omnis porro?<br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, veniam accusantium quo, rerum laboriosam eius inventore voluptates quos temporibus, quia doloremque id ad ipsum eos hic. Aspernatur porro pariatur explicabo.</p>
+            </div>
+        </div>
+        <div class="menu-open">
+            <a href="#" onclick="openSideMenu()">Menu</a>
+        </div>
+        <div class="news-open">
+            <a href="#" onclick="openSideNewInfo()">Info</a>
+        </div>
+    </div>
+</main>
+    <footer>
+        <h6>Alrights reserved Md Sahadat Hossain Sagor ©2022</h6>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        
+        function openSideMenu() {
+            var menu = document.getElementById("menuSideBar");
+            var width = menu.style.width;
+            console.log(width)
+            if (width !== "250px") {
+                menu.style.width = "250px";
+            } else {
+                menu.style.width = "0";
+            }
+        }
+        function openSideNewInfo() {
+            var menu = document.getElementById("newsSideBar");
+            var width = menu.style.width;
+            console.log(width)
+            if (width !== "250px") {
+                menu.style.width = "250px";
+            } else {
+                menu.style.width = "0";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
